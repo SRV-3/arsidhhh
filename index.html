@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arsidhhh - Creative Agency</title>
+    <link rel="icon" href="./assets/logo1.avif" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Remix Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+      integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <!-- HEADER/NAVIGATION -->
+      <header class="header">
+        <div class="header-content">
+          <div class="logo">
+            <img src="./assets/logo.png" alt="Arsidhhh Logo" class="logo-img" />
+          </div>
+          <nav class="nav">
+            <button class="nav-toggle" id="navToggle">
+              <i class="ri-menu-line"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+              <li><a href="#services">Services</a></li>
+              <li><a href="#process">Process</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#cta" class="btn-nav">Get Started</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- HERO SECTION -->
+      <section class="hero" id="hero">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <h1 class="hero-title reveal-text">
+                We Turn Content Into Growth
+              </h1>
+              <p class="hero-subtitle reveal-text">
+                Helping creators and brands scale through powerful visuals,
+                strategy, and storytelling.
+              </p>
+              <div class="hero-buttons">
+                <button
+                  class="btn btn-primary"
+                  onclick="
+                    document
+                      .getElementById('cta')
+                      .scrollIntoView({ behavior: 'smooth' })
+                  "
+                >
+                  Get Started
+                </button>
+                <button
+                  class="btn btn-secondary"
+                  onclick="
+                    document
+                      .getElementById('portfolio')
+                      .scrollIntoView({ behavior: 'smooth' })
+                  "
+                >
+                  View Work
+                </button>
+              </div>
+            </div>
+            <div class="hero-visual">
+              <div class="floating-card floating-card-1">
+                <i class="ri-video-add-line"></i>
+                <span>Video Editing</span>
+              </div>
+              <div class="floating-card floating-card-2">
+                <i class="ri-pencil-line"></i>
+                <span>Design</span>
+              </div>
+              <div class="floating-card floating-card-3">
+                <i class="ri-line-chart-line"></i>
+                <span>Growth</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Background blobs -->
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+      </section>
+
+      <!-- SERVICES SECTION -->
+      <section class="services" id="services">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">
+              Everything you need to scale your brand
+            </p>
+          </div>
+          <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card glass-effect">
+              <div class="service-icon">
+                <i class="ri-video-add-line"></i>
+              </div>
+              <h3>Video Editing</h3>
+              <p>
+                Professional video production and editing that captures your
+                brand's story with stunning visuals.
+              </p>
+            </div>
+            <!-- Service 2 -->
+            <div class="service-card glass-effect">
+              <div class="service-icon">
+                <i class="ri-palette-line"></i>
+              </div>
+              <h3>Graphic Design</h3>
+              <p>
+                Custom graphics and visual content designed to make your brand
+                stand out across all platforms.
+              </p>
+            </div>
+            <!-- Service 3 -->
+            <div class="service-card glass-effect">
+              <div class="service-icon">
+                <i class="ri-share-2-line"></i>
+              </div>
+              <h3>Social Media Management</h3>
+              <p>
+                Strategic content planning and management to keep your audience
+                engaged and growing.
+              </p>
+            </div>
+            <!-- Service 4 -->
+            <div class="service-card glass-effect">
+              <div class="service-icon">
+                <i class="ri-compass-discover-line"></i>
+              </div>
+              <h3>Content Strategy</h3>
+              <p>
+                Data-driven strategies designed to maximize reach, engagement,
+                and conversion rates.
+              </p>
+            </div>
+            <!-- Service 5 -->
+            <div class="service-card glass-effect">
+              <div class="service-icon">
+                <i class="ri-trending-up-line"></i>
+              </div>
+              <h3>Lead Generation</h3>
+              <p>
+                Targeted campaigns built to convert your audience into qualified
+                leads and paying customers.
+              </p>
+            </div>
+            <!-- Service 6 -->
+            <div class="service-card glass-effect">
+              <div class="service-icon">
+                <i class="ri-user-star-line"></i>
+              </div>
+              <h3>Personal Branding</h3>
+              <p>
+                Build a powerful personal brand that establishes you as an
+                authority in your industry.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS SECTION - VERTICAL TIMELINE -->
+      <section class="process" id="process">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Our Process</h2>
+            <p class="section-subtitle">How we turn your vision into reality</p>
+          </div>
+          <div class="timeline">
+            <!-- Step 1 -->
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+              </div>
+              <div class="timeline-content glass-effect">
+                <h3>Understanding the Client</h3>
+                <p>
+                  We dive deep into your brand, goals, and audience to
+                  understand what makes you unique.
+                </p>
+              </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+              </div>
+              <div class="timeline-content glass-effect">
+                <h3>Strategy Planning</h3>
+                <p>
+                  We develop a comprehensive content and growth strategy
+                  tailored to your specific goals.
+                </p>
+              </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+              </div>
+              <div class="timeline-content glass-effect">
+                <h3>Content Creation</h3>
+                <p>
+                  Our creative team produces high-quality videos, graphics, and
+                  content that resonates.
+                </p>
+              </div>
+            </div>
+            <!-- Step 4 -->
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+              </div>
+              <div class="timeline-content glass-effect">
+                <h3>Optimization & Posting</h3>
+                <p>
+                  Strategic scheduling and optimization ensures maximum
+                  visibility and engagement.
+                </p>
+              </div>
+            </div>
+            <!-- Step 5 -->
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+              </div>
+              <div class="timeline-content glass-effect">
+                <h3>Growth Tracking</h3>
+                <p>
+                  Continuous monitoring, analysis, and optimization to ensure
+                  consistent growth.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY CHOOSE US SECTION -->
+      <section class="why-us">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Why Choose Us</h2>
+            <p class="section-subtitle">What sets us apart from the rest</p>
+          </div>
+          <div class="why-us-grid">
+            <div class="why-us-card glass-effect">
+              <div class="why-us-icon">
+                <i class="ri-target-line"></i>
+              </div>
+              <h3>Results-Driven Approach</h3>
+              <p>
+                Every strategy is focused on delivering measurable results and
+                real business growth.
+              </p>
+            </div>
+            <div class="why-us-card glass-effect">
+              <div class="why-us-icon">
+                <i class="ri-line-chart-upward-2-line"></i>
+              </div>
+              <h3>Consistent Growth</h3>
+              <p>
+                We implement systems that ensure steady, sustainable growth
+                month after month.
+              </p>
+            </div>
+            <div class="why-us-card glass-effect">
+              <div class="why-us-icon">
+                <i class="ri-lightbulb-flash-line"></i>
+              </div>
+              <h3>Creative + Strategy</h3>
+              <p>
+                Perfect blend of creativity and data-driven strategy for maximum
+                impact.
+              </p>
+            </div>
+            <div class="why-us-card glass-effect">
+              <div class="why-us-icon">
+                <i class="ri-lightning-charge-line"></i>
+              </div>
+              <h3>Fast Turnaround</h3>
+              <p>
+                Quick execution without compromising quality, keeping your brand
+                always moving.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO SECTION -->
+      <section class="portfolio" id="portfolio">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Our Work</h2>
+            <p class="section-subtitle">Showcasing our latest projects</p>
+          </div>
+          <div class="portfolio-grid" id="portfolioGrid">
+            <!-- Portfolio items will be populated by JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section class="about" id="about">
+        <div class="container">
+          <div class="about-content">
+            <div class="section-header">
+              <h2 class="section-title">About Arsidhhh</h2>
+            </div>
+            <p class="about-text">
+              At Arsidhhh, we help creators and brands turn ideas into impactful
+              content that drives engagement and real growth. Our vision is to
+              build powerful digital identities that scale globally. With a team
+              of passionate creatives and strategists, we combine storytelling,
+              design, and data to create content that doesn't just capture
+              attention—it converts. From emerging creators to established
+              brands, we're committed to helping you reach your highest
+              potential.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA SECTION -->
+      <section class="cta" id="cta">
+        <div class="container">
+          <div class="cta-content">
+            <h2 class="cta-title">Let's Build Your Brand</h2>
+            <p class="cta-subtitle">
+              Ready to scale your presence and drive real growth?
+            </p>
+            <button
+              class="btn btn-large"
+              onclick="window.location.href = 'https://wa.me/8219625732'"
+            >
+              Book a Call
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-brand">
+              <img
+                src="./assets/logo.png"
+                alt="Arsidhhh Logo"
+                class="logo-img"
+              />
+              <p>Turning ideas into growth</p>
+            </div>
+            <div class="footer-links">
+              <a
+                href="https://www.instagram.com/arsidhh/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a href="mailto:contact@arsidhhh.com">
+                <i class="ri-mail-line"></i>
+              </a>
+              <a
+                href="https://wa.me/8219625732"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="ri-whatsapp-line"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2026 Arsidhhh. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
