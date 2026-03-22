@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
   setupSmoothScroll();
   setupVideoControls();
   setupCustomCursor();
+  setupNumberCounter();
+  setupHalfWheelAnimation();
 });
 
 // ========== SCROLL REVEAL WITH INTERSECTION OBSERVER ==========
@@ -393,3 +395,97 @@ window.addEventListener("beforeprint", function () {
 window.addEventListener("afterprint", function () {
   location.reload();
 });
+
+// ========== NUMBER COUNTER ANIMATION ==========
+function setupNumberCounter() {
+  const resultSection = document.querySelector(".results");
+  if (!resultSection) return;
+
+  let hasAnimated = false;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          hasAnimated = true;
+          animateNumber();
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.3,
+      rootMargin: "0px 0px -100px 0px",
+    },
+  );
+
+  observer.observe(resultSection);
+
+  function animateNumber() {
+    const counterElement = document.getElementById("numbersCount");
+    if (!counterElement) return;
+
+    const targetNumber = 5000;
+    const startNumber = Math.floor(Math.random() * (4000 - 1000 + 1)) + 1000;
+    const duration = 1000;
+    const startTime = Date.now();
+
+    function updateNumber() {
+      const now = Date.now();
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+
+      const easeProgress = 1 - Math.pow(1 - progress, 3);
+      const currentNumber = Math.floor(
+        startNumber + (targetNumber - startNumber) * easeProgress,
+      );
+
+      counterElement.textContent = currentNumber;
+
+      if (progress < 1) {
+        requestAnimationFrame(updateNumber);
+      } else {
+        counterElement.textContent = targetNumber;
+        const numberElement = document.querySelector(".results-number");
+        console.log(counterElement.textContent);
+        if (numberElement) {
+          numberElement.classList.add("finished");
+        }
+      }
+    }
+
+    requestAnimationFrame(updateNumber);
+  }
+}
+
+// ========== HALF-WHEEL THUMBNAILS ANIMATION ==========
+function setupHalfWheelAnimation() {
+  const thumbnailsSection = document.querySelector(".thumbnails-section");
+  if (!thumbnailsSection) {
+    console.log("Thumbnails section not found");
+    return;
+  }
+
+  let hasAnimated = false;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          hasAnimated = true;
+          console.log(
+            "Thumbnails section visible - triggering scroll movement",
+          );
+          thumbnailsSection.classList.add("animate-scroll");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.15,
+      rootMargin: "0px 0px -50px 0px",
+    },
+  );
+
+  observer.observe(thumbnailsSection);
+}
